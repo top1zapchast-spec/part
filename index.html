@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТОР запчастина — Головна</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Навігація -->
+    <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-amber-400 flex items-center gap-2">
+                <i class="fa-solid fa-car"></i> ТОР запчастина
+            </a>
+            <nav class="hidden md:flex gap-6 font-medium">
+                <a href="index.html" class="text-amber-400 font-bold">Головна</a>
+                <a href="catalog.html" class="hover:text-amber-400 transition">Каталог</a>
+                <a href="contacts.html" class="hover:text-amber-400 transition">Контакти</a>
+            </nav>
+            <a href="tel:+380687013030" class="text-amber-400 font-bold hidden sm:block">
+                <i class="fa-solid fa-phone"></i> +380 (68) 701-30-30
+            </a>
+        </div>
+    </header>
+
+    <!-- Головна банерна секція -->
+    <section class="bg-slate-800 text-white py-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Автозапчастини у м. Хмельницький</h1>
+            <p class="text-gray-300 text-lg mb-8">Якісні деталі підвіски, двигуна, акумулятори та сервіс автокондиціонерів.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="catalog.html" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-8 py-3 rounded-lg shadow-lg transition">
+                    Перейти в каталог
+                </a>
+                <a href="#vin" class="bg-slate-700 hover:bg-slate-600 text-white font-bold px-8 py-3 rounded-lg border border-gray-500 transition">
+                    Підбір за VIN
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секція підбору за VIN -->
+    <section id="vin" class="py-12 bg-white">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <div class="bg-slate-50 p-6 rounded-xl border border-gray-200 shadow-sm">
+                <h2 class="text-2xl font-bold mb-2 text-slate-900 text-center">
+                    <i class="fa-solid fa-magnifying-glass text-amber-500"></i> Запит на підбір по VIN-коду
+                </h2>
+                <form action="https://formspree.io/f/xrpeqzro" method="POST" class="space-y-4 mt-4">
+                    <input type="text" name="name" placeholder="Ваше ім'я" required class="w-full p-3 border rounded-lg">
+                    <input type="tel" name="phone" placeholder="Телефон (+380...)" required class="w-full p-3 border rounded-lg">
+                    <input type="text" name="vin" placeholder="VIN-код авто (17 символів)" required class="w-full p-3 border rounded-lg uppercase">
+                    <textarea name="parts" rows="3" placeholder="Перелік необхідних запчастин" class="w-full p-3 border rounded-lg"></textarea>
+                    <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-amber-400 font-bold py-3 rounded-lg transition">Надіслати запит</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-slate-900 text-gray-400 text-center py-6 mt-auto">
+        <p>&copy; 2026 ТОР запчастина. Хмельницький.</p>
+    </footer>
+</body>
+</html>
